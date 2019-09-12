@@ -1,17 +1,15 @@
 import React from 'react';
+import logo from './unicorn.jpg'
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
         <header>
-            <h1 style={headerStyle}>TodoList</h1>
+            <img src={logo} alt="unicorn"></img>
+            <h1>TodoList</h1>
+            <Link className="header-link" to="/">Home</Link> | <Link className="header-link" to="/about">About</Link>
         </header>
     )
 }
 
-const headerStyle = {
-    background: '#333',
-    color: '#fff',
-    textAlign: 'center',
-    padding: '10px'
-}
 export default Header;

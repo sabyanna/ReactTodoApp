@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { addTodo } from '../actions/todoActions';
 
 export class AddTodo extends Component {
     state = {
         title: ''
     }
 
-    addTodo = (title) => {
-        axios.post('https://jsonplaceholder.typicode.com/todos', {
-          title,
-          completed: false,
-        })
-          .then(res => this.setState({todos: 
-            [...this.state.todos, res.data] }));
-      }
-
     onSubmit = (e) => {
         e.preventDefault();
-        this.addTodo(this.state.title);
+        this.props.addTodo(this.state.title);
         this.setState({title: ''});
     } 
 
@@ -45,4 +38,4 @@ export class AddTodo extends Component {
     }
 }
 
-export default AddTodo
+export default connect(null, { addTodo}) (AddTodo)

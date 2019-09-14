@@ -1,2 +1,2 @@
 export const FETCH_TODOS = 'FETCH_TODOS';
-export const NEW_TODO = 'NEW_TODO';
+export const ADD_TODO = 'ADD_TODO';

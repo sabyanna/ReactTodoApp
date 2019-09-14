@@ -1,4 +1,4 @@
-import { FETCH_TODOS, NEW_TODO } from './types';
+import { FETCH_TODOS, ADD_TODO } from './types';
 import axios from 'axios';
 
 export const fetchTodos = () => dispatch => {
@@ -9,6 +9,18 @@ export const fetchTodos = () => dispatch => {
         dispatch({
           type: FETCH_TODOS,
           payload: res.data
-      })})
+        })})
+}
+
+export const addTodo = (title) => dispatch => {
+    console.log('fetching');
+    axios.post('https://jsonplaceholder.typicode.com/todos', {
+        title,
+        completed: false,
+        })
+        .then(res => dispatch({
+            type: ADD_TODO,
+            payload: res.data
+            }));
     
 }

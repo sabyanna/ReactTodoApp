@@ -17,7 +17,10 @@ class App extends Component {
           <Router>
           <div className="App">
             <div className="container">
-              <Header/>
+              
+                <Header/>
+              
+              
               <div className="todoContainer">
                   <Route exact path="/" render={props => (
                     <>

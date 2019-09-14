@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +9,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
+
 
 a {
   color: #333;
@@ -65,15 +67,19 @@ a {
 }
 
 .header-link {
-  color: #fff;
+	float: right;
+  	color: red;
+}
+.Buttonka {
+	float: right;
+  	color: red;
 }
 
 header {
-  background: black;
-  color: #fff;
-  text-align : center;
-  padding: 10px;
-  height: 100px;
+  
+  padding: 0, 40px;
+  margin-right: 50px;
+  
 }
 
 img {

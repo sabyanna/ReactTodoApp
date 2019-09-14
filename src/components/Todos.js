@@ -9,8 +9,7 @@ class Todos extends Component {
     componentDidMount() {
         this.props.fetchTodos();
       }
-    
-      
+
     
     render() {
         console.log(this.props.todos)
@@ -22,8 +21,6 @@ class Todos extends Component {
 
 Todos.propTypes = {
     todos: PropTypes.array.isRequired,
-    markComplete: PropTypes.func.isRequired,
-    delTodo: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({

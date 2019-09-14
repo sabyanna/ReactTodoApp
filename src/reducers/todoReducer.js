@@ -1,4 +1,4 @@
-import { FETCH_TODOS, ADD_TODO } from '../actions/types';
+import { FETCH_TODOS, ADD_TODO, DEL_TODO, MARK_COMPLETED } from '../actions/types';
 
 const initialState =  []
 
@@ -10,6 +10,15 @@ export default function(prevTodos = initialState, action) {
             return action.payload
         case ADD_TODO:
             return [...prevTodos, action.payload]
+        case DEL_TODO:
+            return prevTodos.filter(todo => todo.id !== action.id)
+        case MARK_COMPLETED:
+            return prevTodos.map(todo => {
+                if(todo.id === action.payload.id) {
+                  todo = action.payload
+                }
+                return todo;
+              })
         default:
             return prevTodos;
     }

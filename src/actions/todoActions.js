@@ -1,4 +1,4 @@
-import { FETCH_TODOS, ADD_TODO } from './types';
+import { FETCH_TODOS, ADD_TODO, DEL_TODO, MARK_COMPLETED } from './types';
 import axios from 'axios';
 
 export const fetchTodos = () => dispatch => {
@@ -23,4 +23,25 @@ export const addTodo = (title) => dispatch => {
             payload: res.data
             }));
     
+}
+
+export const delTodo = (id) => dispatch => {
+    console.log('fetching');
+    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then(res => dispatch({
+            type: DEL_TODO,
+            id
+            }));
+    
+}
+
+export const markCompleted = (id, completed) => dispatch => {
+  console.log('fetching');
+  axios.patch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+            completed,
+        })
+      .then(res => dispatch({
+          type: MARK_COMPLETED,
+          payload: res.data
+          }));
 }

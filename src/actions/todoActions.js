@@ -34,10 +34,10 @@ export const delTodo = (id) => dispatch => {
     
 }
 
-export const markCompleted = (id, completed) => dispatch => {
+export const markCompleted = (id, completed, title) => dispatch => {
   console.log('fetching');
   axios.patch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
-            completed,
+            completed, id, title
         })
       .then(res => dispatch({
           type: MARK_COMPLETED,

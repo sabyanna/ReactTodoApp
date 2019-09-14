@@ -4,10 +4,11 @@ import axios from 'axios';
 export const fetchTodos = () => dispatch => {
     console.log('fetching');
     axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
-      .then(res => res.json())
-      .then(todos => dispatch({
+      //.then(res => res.json())
+      .then(res => {console.log(res.data)
+        dispatch({
           type: FETCH_TODOS,
-          payload: todos
-      }))
+          payload: res.data
+      })})
     
 }

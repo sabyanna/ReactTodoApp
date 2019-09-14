@@ -1,13 +1,23 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 
 export class AddTodo extends Component {
     state = {
         title: ''
     }
 
+    addTodo = (title) => {
+        axios.post('https://jsonplaceholder.typicode.com/todos', {
+          title,
+          completed: false,
+        })
+          .then(res => this.setState({todos: 
+            [...this.state.todos, res.data] }));
+      }
+
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.addTodo(this.state.title);
+        this.addTodo(this.state.title);
         this.setState({title: ''});
     } 
 

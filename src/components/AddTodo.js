@@ -29,7 +29,7 @@ export class AddTodo extends Component {
                     spacing={24}
                     
                 >
-                    <Grid item xs={10}>
+                    <Grid item xs={8}>
                         <TextField
                             type="text"
                             name="title"

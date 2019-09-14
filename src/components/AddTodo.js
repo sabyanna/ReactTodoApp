@@ -36,16 +36,18 @@ export class AddTodo extends Component {
                             placeholder="Add Todo ..."
                             value={this.state.title}
                             onChange={this.onChange}
+                            
                             fullWidth
                         />
                         </Grid>
                     <Grid item xs={2}>
                         <Button
-                            variant="contained"
+                            variant="outlined"
                             color="primary"
                             type="submit"
                             value="submit"
-                            className="btn"  
+                            className="btn" 
+                            style={{marginLeft: '5px'}} 
                             fullWidth                         
                         >Submit</Button>
                     </Grid>

@@ -1,18 +1,14 @@
 import { FETCH_TODOS, NEW_TODO } from '../actions/types';
 
-const initialState = {
-    todos: []
-}
+const initialState =  []
 
-export default function(state = initialState, action) {
+
+export default function(prevTodos = initialState, action) {
     console.log(action)
     switch(action.type) {
         case FETCH_TODOS:
-                return {
-                    ...state,
-                    todos: action.payload
-                  };
+                return action.payload
         default:
-            return state;
+            return prevTodos;
     }
 }

@@ -5,11 +5,8 @@ import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import Header from './components/layout/Header';
 import About from './components/pages/About';
-//import uuid from 'uuid';
 import { Provider } from 'react-redux';
 import store from './store'
-
-import Container from '@material-ui/core/Container';
 
 class App extends Component {
 
@@ -17,18 +14,16 @@ class App extends Component {
     return (
       <Provider store={store}>
           <Router>         
-                <Header/>              
-                <Container maxWidth="md">
-                  <Route exact path="/" render={props => (
-                    <>
-                      <AddTodo/>
-                      <Todos/>
-                    </>
-                  )} />
-                  <Route path="/about" component={About}/>
-              </Container>
-           
-         
+              <Header/>              
+              
+                <Route exact path="/" render={props => (
+                  <>
+                    <AddTodo/>
+                    <Todos/>
+                  </>
+                )} />
+                <Route path="/about" component={About}/>
+              
         </Router>
       </Provider> 
     );

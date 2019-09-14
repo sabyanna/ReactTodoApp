@@ -29,25 +29,24 @@ export class AddTodo extends Component {
                     spacing={24}
                     
                 >
-                    <Grid item xs={8}>
+                    <Grid item xs={7}>
                         <TextField
                             type="text"
                             name="title"
                             placeholder="Add Todo ..."
                             value={this.state.title}
                             onChange={this.onChange}
-                            
                             fullWidth
                         />
                         </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={1}>
                         <Button
                             variant="outlined"
                             color="primary"
                             type="submit"
                             value="submit"
                             className="btn" 
-                            style={{marginLeft: '5px'}} 
+                            style={{marginLeft: '10px'}} 
                             fullWidth                         
                         >Submit</Button>
                     </Grid>

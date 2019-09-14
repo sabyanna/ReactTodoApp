@@ -18,9 +18,9 @@ import { Link } from 'react-router-dom';
                     maxWidth="sm" 
                     spacing={24}
                 >
-                    <Grid item xs={8}>
+                    <Grid item xs={7}>
                         <Typography variant="title" color="inherit" >
-                        <h1>TodoList</h1>
+                            <h1>TodoList</h1>
                         </Typography>
                     </Grid>
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { delTodo, markCompleted} from '../actions/todoActions';
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -13,9 +15,10 @@ export class TodoItem extends Component {
         return (
             <div className="todoItemDiv" style = {this.getStyle()}>
                 <p>
-                    <input className="checker" type="checkbox" checked={completed} onChange={this.props.markComplete.bind (this, id)} /> 
+                    <input className="checker" type="checkbox" checked={completed} 
+                        onChange={() => this.props.markCompleted(id, !completed)} /> 
                     {title}
-                    <button className="deleteBtn" onClick={this.props.delTodo.bind(this, id)}>Delete</button>
+                    <button className="deleteBtn" onClick={() => this.props.delTodo(id)}>Delete</button>
                 </p>
             </div>
         )
@@ -26,4 +29,4 @@ TodoItem.propTypes = {
     todo: PropTypes.object.isRequired
 }
 
-export default TodoItem
+export default connect(null, { delTodo, markCompleted} ) (TodoItem)

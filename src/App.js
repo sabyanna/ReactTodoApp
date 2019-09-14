@@ -16,8 +16,7 @@ class App extends Component {
   render() { 
     return (
       <Provider store={store}>
-          <Router>
-          <div className="App">          
+          <Router>         
                 <Header/>              
                 <Container maxWidth="md">
                   <Route exact path="/" render={props => (
@@ -28,7 +27,7 @@ class App extends Component {
                   )} />
                   <Route path="/about" component={About}/>
               </Container>
-            </div>
+           
          
         </Router>
       </Provider> 

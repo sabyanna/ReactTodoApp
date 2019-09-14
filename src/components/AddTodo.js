@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/todoActions';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 export class AddTodo extends Component {
     state = {
@@ -18,32 +20,37 @@ export class AddTodo extends Component {
 
     render() {
         return (
-            <Grid
-            justify="center"
-            container
-            >
-                <form className="addForm" onSubmit={this.onSubmit} style={{ display: 'flex'}}>
-                <Grid item xs={6}>
-                    <input 
-                        type="text"
-                        name="title"
-                        style={{flex: '10', paddig: '5px'}}
-                        placeholder="Add Todo ..."
-                        value={this.state.title}
-                        onChange={this.onChange}
-                    />
-                    </Grid>
-                    <Grid item xs={3}>
-                    <input
-                        type="submit"
-                        value="submit"
-                        className="btn"
-                        style={{felx: '1'}}
-                    />
-                    </Grid>
+            
+            <form className="addForm" onSubmit={this.onSubmit} style={{ display: 'flex'}}>
+                <Grid
+                    justify="center"
+                    container 
+                    maxWidth="sm" 
+                    spacing={24}
                     
-                </form>
-            </Grid>
+                >
+                    <Grid item xs={10}>
+                        <TextField
+                            type="text"
+                            name="title"
+                            placeholder="Add Todo ..."
+                            value={this.state.title}
+                            onChange={this.onChange}
+                            fullWidth
+                        />
+                        </Grid>
+                    <Grid item xs={2}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                            value="submit"
+                            className="btn"  
+                            fullWidth                         
+                        >Submit</Button>
+                    </Grid>
+                </Grid>
+            </form>
         )
     }
 }

@@ -14,7 +14,8 @@ import { Link } from 'react-router-dom';
             <Toolbar>
                 <Grid
                     justify="center"
-                    container maxWidth="sm" 
+                    container 
+                    maxWidth="sm" 
                     spacing={24}
                 >
                     <Grid item xs={8}>

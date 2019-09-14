@@ -7,13 +7,12 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+
 }
 
 
 a {
-  color: #333;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .checker {
@@ -24,9 +23,7 @@ a {
   padding: 0;
 }
 
-.todoContainer {
-  margin: 0 100px;
-}
+
 
 .btn {
   display: inline-block;
@@ -64,27 +61,6 @@ a {
 	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
 	background-color:#bc80ea;
-}
-
-.header-link {
-	float: right;
-  	color: red;
-}
-.Buttonka {
-	float: right;
-  	color: red;
-}
-
-header {
-  
-  padding: 0, 40px;
-  margin-right: 50px;
-  
-}
-
-img {
-  height: 80px;
-  float: right;
 }
 
 .deleteBtn {

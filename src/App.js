@@ -9,19 +9,17 @@ import About from './components/pages/About';
 import { Provider } from 'react-redux';
 import store from './store'
 
+import Container from '@material-ui/core/Container';
+
 class App extends Component {
 
   render() { 
     return (
       <Provider store={store}>
           <Router>
-          <div className="App">
-            <div className="container">
-              
-                <Header/>
-              
-              
-              <div className="todoContainer">
+          <div className="App">          
+                <Header/>              
+                <Container maxWidth="md">
                   <Route exact path="/" render={props => (
                     <>
                       <AddTodo/>
@@ -29,9 +27,9 @@ class App extends Component {
                     </>
                   )} />
                   <Route path="/about" component={About}/>
-              </div>
+              </Container>
             </div>
-          </div>
+         
         </Router>
       </Provider> 
     );

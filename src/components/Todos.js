@@ -16,13 +16,13 @@ class Todos extends Component {
         <div style={{margin: '5px'}} >
           <TodoItem key={todo.id} todo={todo}/>
         </div>
-      ))
+      )).reverse()
 
     const todos = this.props.todos
       .map((todo) => (
         <div style={{margin: '5px'}} >
           <TodoItem key={todo.id} todo={todo}/>
-        </div>))
+        </div>)).reverse()
       .concat(<CompletedSign/>)
       .concat(completed)
     return (todos)

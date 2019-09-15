@@ -6,9 +6,7 @@ export default function(prevTodos = initialState, action) {
     console.log(action)
     switch(action.type) {
         case FETCH_TODOS:
-            return action.payload.sort(function (a, b) {
-                return a.completed - b.completed;
-            })
+            return action.payload
         case ADD_TODO:
             return [...prevTodos, action.payload]
         case DEL_TODO:

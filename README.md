@@ -4,4 +4,4 @@
 React, Redux, Material UI
 
 ### Extra resources
-I used [jsonplaceholder](https://jsonplaceholder.typicode.com/) as my fake backend
+axios - I used [jsonplaceholder](https://jsonplaceholder.typicode.com/) as my fake backend

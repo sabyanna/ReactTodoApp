@@ -11,7 +11,11 @@ export default function CompletedSign() {
                 maxwidth="sm"
             >
                 <Grid item xs={8}>
-                    <Typography style={{marginLeft: 'px'}} variant="h5" component="h2">
+                    <Typography
+                        style={{marginLeft: 'px'}}
+                        variant="h5"
+                        component="h2"
+                    >
                         Completed
                     </Typography>
                 </Grid>      

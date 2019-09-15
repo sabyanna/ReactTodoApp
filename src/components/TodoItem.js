@@ -23,7 +23,7 @@ export class TodoItem extends Component {
                 <Grid
                     justify="center"
                     container 
-                    maxWidth="sm" 
+                    maxwidth="sm" 
                 >
                     <Grid item xs={1}>
                         <Checkbox

@@ -10,22 +10,22 @@ class Todos extends Component {
     this.props.fetchTodos();
   }
 
-  render() {    
-    const completed = this.props.completedTodos
+  render() {
+    const {todos, completedTodos} = this.props;
+    const completed = completedTodos
       .map((todo) => (
         <div style={{margin: '5px'}} >
           <TodoItem key={todo.id} todo={todo}/>
         </div>
       )).reverse()
 
-    const todos = this.props.todos
+    const allTodos = todos
       .map((todo) => (
         <div style={{margin: '5px'}} >
           <TodoItem key={todo.id} todo={todo}/>
         </div>)).reverse()
-      .concat(<CompletedSign/>)
-      .concat(completed)
-    return (todos)
+      .concat(<CompletedSign/>, completed)
+    return (allTodos)
   }
 }
 

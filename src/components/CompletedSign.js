@@ -8,8 +8,7 @@ export default function CompletedSign() {
             <Grid
                 justify="center"
                 container 
-                maxWidth="sm"
-                alignItems="left"
+                maxwidth="sm"
             >
                 <Grid item xs={8}>
                     <Typography style={{marginLeft: 'px'}} variant="h5" component="h2">

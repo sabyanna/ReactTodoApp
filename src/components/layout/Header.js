@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom';
 export default function Header() {
     return (
         <AppBar position="static">           
-            <Toolbar >            
+            <Toolbar>            
                 <Grid
                     justify="center"
                     container 
-                    maxWidth="sm" 
+                    maxwidth="sm" 
                 >                
                     <Grid item xs={7}>
                         <Typography variant="title" color="inherit"  >

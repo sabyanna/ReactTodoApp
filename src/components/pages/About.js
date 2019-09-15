@@ -8,7 +8,7 @@ function About() {
     return (
         <>
             <div>
-                <Container maxWidth="sm" style={{marginTop: '50px'}} >                      
+                <Container maxWidth="md" style={{marginTop: '50px'}} >                      
                     <Typography variant="h2" component="h2" gutterBottom>
                         About
                     </Typography>

@@ -26,14 +26,11 @@ import Grid from '@material-ui/core/Grid';
                     </Grid>
 
                     <Grid item xs={1}>
-                        <Button variant="contained" color="primary" to="/">Home</Button>
-                        
+                        <Button variant="contained" color="primary" to="/">Home</Button>                        
                     </Grid>
 
-                    <Grid item xs={1}>
-                        
-                        <Button variant="contained" color="primary" to="/about">About</Button>
-                        
+                    <Grid item xs={1}>                        
+                        <Button variant="contained" color="primary" to="/about">About</Button>                       
                     </Grid>
                 </Grid>
             </Toolbar>

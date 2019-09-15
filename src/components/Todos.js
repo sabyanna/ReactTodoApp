@@ -10,9 +10,10 @@ class Todos extends Component {
     }
 
     render() {
-      console.log(this.props.todos)
       return this.props.todos.map((todo) => (
+        <div style={{margin: '5px'}} >
           <TodoItem key={todo.id} todo={todo}/>
+        </div>
     ))
   }
 }

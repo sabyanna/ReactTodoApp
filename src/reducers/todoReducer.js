@@ -2,7 +2,6 @@ import { FETCH_TODOS, ADD_TODO, DEL_TODO, MARK_COMPLETED } from '../actions/type
 
 const initialState =  []
 
-
 export default function(prevTodos = initialState, action) {
     console.log(action)
     switch(action.type) {

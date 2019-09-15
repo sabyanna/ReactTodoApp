@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
-class CompletedSign extends Component {
-    render() {
+export default function CompletedSign() {
+    
         return (
             <div>
                 <Grid
@@ -16,13 +16,9 @@ class CompletedSign extends Component {
                     <Typography style={{marginLeft: 'px'}} variant="h5" component="h2">
                         Completed
                     </Typography>
-                    </Grid>
-        
-                </Grid>
-                
+                    </Grid>      
+                </Grid>              
             </div>
         )
-    }
+    
 }
-
-export default CompletedSign

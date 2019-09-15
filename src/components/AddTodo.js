@@ -19,9 +19,12 @@ export class AddTodo extends Component {
     onChange = (e) => this.setState({ [e.target.name]: e.target.value});
 
     render() {
-        return (
-            
-            <form className="addForm" onSubmit={this.onSubmit} style={{ display: 'flex'}}>
+        return (           
+            <form 
+                className="addForm" 
+                onSubmit={this.onSubmit}
+                style={{ display: 'flex'}}
+            >
                 <Grid
                     justify="center"
                     container 

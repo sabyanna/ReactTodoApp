@@ -5,8 +5,6 @@ import CompletedSign from './CompletedSign';
 import { connect } from 'react-redux';
 import { fetchTodos } from '../actions/todoActions';
 
-
-
 class Todos extends Component {  
   componentDidMount() {
     this.props.fetchTodos();

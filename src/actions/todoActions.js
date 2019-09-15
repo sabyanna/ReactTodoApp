@@ -20,7 +20,6 @@ export const addTodo = (title) => dispatch => {
             type: ADD_TODO,
             payload: res.data
             }));
-    
 }
 
 export const delTodo = (id) => dispatch => {
@@ -30,7 +29,6 @@ export const delTodo = (id) => dispatch => {
             type: DEL_TODO,
             id
             }));
-    
 }
 
 export const markCompleted = (id, completed, title) => dispatch => {

@@ -25,7 +25,6 @@ export class TodoItem extends Component {
                     container 
                     maxWidth="sm" 
                 >
-
                     <Grid item xs={1}>
                         <Checkbox
                             className="checker"
@@ -34,21 +33,18 @@ export class TodoItem extends Component {
                             color="primary"
                             onChange={() => this.props.markCompleted(id, !completed, title)} /> 
                     </Grid>
-
                     <Grid item xs={6}>
                         <Typography variant="subtitle1" gutterBottom>
                             <p style={this.getStyle()}>{title}</p>
                         </Typography>
                     </Grid>
-
                     <Grid item xs={1}>
                         <Button  
                             color="secondary"
                             style={{marginLeft: '10px'}} 
                             fullWidth  
                             onClick={() => this.props.delTodo(id)}><ClearIcon/></Button>  
-                    </Grid>
-                    
+                    </Grid>                   
                 </Grid>
             </div>
         )

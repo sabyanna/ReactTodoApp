@@ -42,8 +42,7 @@ export class TodoItem extends Component {
                     </Grid>
 
                     <Grid item xs={1}>
-                        <Button 
-                            
+                        <Button  
                             color="secondary"
                             style={{marginLeft: '10px'}} 
                             fullWidth  
@@ -51,10 +50,7 @@ export class TodoItem extends Component {
                     </Grid>
                     
                 </Grid>
-                
-
             </div>
-            
         )
     }
 }

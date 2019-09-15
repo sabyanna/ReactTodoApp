@@ -12,7 +12,6 @@ export const fetchTodos = () => dispatch => {
 }
 
 export const addTodo = (title) => dispatch => {
-    console.log('fetching');
     axios.post('https://jsonplaceholder.typicode.com/todos', {
         title,
         completed: false,

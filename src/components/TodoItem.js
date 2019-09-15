@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography'
 import Checkbox from '@material-ui/core/Checkbox';
+import ClearIcon from '@material-ui/icons/Clear';
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -46,7 +47,7 @@ export class TodoItem extends Component {
                             color="secondary"
                             style={{marginLeft: '10px'}} 
                             fullWidth  
-                            onClick={() => this.props.delTodo(id)}>Delete</Button>  
+                            onClick={() => this.props.delTodo(id)}><ClearIcon/></Button>  
                     </Grid>
                     
                 </Grid>

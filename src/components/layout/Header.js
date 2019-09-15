@@ -5,21 +5,24 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
+import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
  
   export default function Header() {
  
     return (
-        
+        <div>
         <AppBar position="static">
-            <Toolbar>
+            
+            <Toolbar >
+            
                 <Grid
                     justify="center"
                     container 
                     maxWidth="sm" 
-                    spacing={24}
                 >
+                    
                     <Grid item xs={7}>
-                        <Typography variant="title" color="inherit" >
+                        <Typography variant="title" color="inherit"  >
                             <h1>TodoList</h1>
                         </Typography>
                     </Grid>
@@ -35,9 +38,10 @@ import { Link } from 'react-router-dom';
                             <Button>About</Button>
                         </Link>
                     </Grid>
-                    
                 </Grid>
             </Toolbar>
-        </AppBar>       
+            
+        </AppBar>   
+        </div>
     )
   }

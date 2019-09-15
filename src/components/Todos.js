@@ -23,7 +23,9 @@ Todos.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  todos: state.todos,
+  todos: state.todos.sort(function (a, b) {
+    return a.completed - b.completed;
+}),
 })
 
 export default connect(mapStateToProps, { fetchTodos}) (Todos);

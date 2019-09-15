@@ -4,7 +4,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'react-router-dom';
  
   export default function Header() {
  
@@ -27,15 +26,14 @@ import { Link } from 'react-router-dom';
                     </Grid>
 
                     <Grid item xs={1}>
-                        <Link to="/">
-                            <Button>Home</Button>
-                        </Link>
+                        <Button variant="contained" color="primary" to="/">Home</Button>
+                        
                     </Grid>
 
                     <Grid item xs={1}>
-                        <Link to="/about">
-                            <Button>About</Button>
-                        </Link>
+                        
+                        <Button variant="contained" color="primary" to="/about">About</Button>
+                        
                     </Grid>
                 </Grid>
             </Toolbar>

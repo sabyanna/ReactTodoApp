@@ -15,15 +15,13 @@ class App extends Component {
       <Provider store={store}>
           <Router>         
               <Header/>              
-              
-                <Route exact path="/" render={props => (
-                  <>
-                    <AddTodo/>
-                    <Todos/>
-                  </>
-                )} />
-                <Route path="/about" component={About}/>
-              
+              <Route exact path="/" render={props => (
+                <>
+                  <AddTodo/>
+                  <Todos/>
+                </>
+              )} />
+              <Route path="/about" component={About}/>
         </Router>
       </Provider> 
     );

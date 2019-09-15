@@ -6,38 +6,40 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
  
-  export default function Header() {
- 
+export default function Header() {
     return (
-        
-        <AppBar position="static">
-            <Toolbar>
+        <AppBar position="static">           
+            <Toolbar >            
                 <Grid
                     justify="center"
                     container 
                     maxWidth="sm" 
-                    spacing={24}
-                >
+                >                
                     <Grid item xs={7}>
-                        <Typography variant="title" color="inherit" >
+                        <Typography variant="title" color="inherit"  >
                             <h1>TodoList</h1>
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={1}>
-                        <Link to="/">
-                            <Button>Home</Button>
-                        </Link>
+                    <Grid item xs={1}>                        
+                        <Button
+                            component={Link}
+                            to="/"
+                            variant="contained"
+                            color="primary"
+                        >Home</Button>                       
                     </Grid>
 
-                    <Grid item xs={1}>
-                        <Link to="/about">
-                            <Button>About</Button>
-                        </Link>
+                    <Grid item xs={1}>                        
+                        <Button
+                            component={Link}
+                            to="/about"
+                            variant="contained"
+                            color="primary"
+                        >About</Button>                         
                     </Grid>
-                    
                 </Grid>
-            </Toolbar>
-        </AppBar>       
+            </Toolbar>            
+        </AppBar> 
     )
-  }
+}

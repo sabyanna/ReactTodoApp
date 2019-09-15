@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-export class AddTodo extends Component {
+class AddTodo extends Component {
     state = {
         title: ''
     }
@@ -19,9 +19,12 @@ export class AddTodo extends Component {
     onChange = (e) => this.setState({ [e.target.name]: e.target.value});
 
     render() {
-        return (
-            
-            <form className="addForm" onSubmit={this.onSubmit} style={{ display: 'flex'}}>
+        return (           
+            <form 
+                className="addForm" 
+                onSubmit={this.onSubmit}
+                style={{ display: 'flex'}}
+            >
                 <Grid
                     justify="center"
                     container 
@@ -38,7 +41,7 @@ export class AddTodo extends Component {
                             onChange={this.onChange}
                             fullWidth
                         />
-                        </Grid>
+                    </Grid>
                     <Grid item xs={1}>
                         <Button
                             variant="outlined"

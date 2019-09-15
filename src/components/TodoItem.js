@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography'
 import Checkbox from '@material-ui/core/Checkbox';
+import ClearIcon from '@material-ui/icons/Clear';
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -24,7 +25,6 @@ export class TodoItem extends Component {
                     container 
                     maxWidth="sm" 
                 >
-
                     <Grid item xs={1}>
                         <Checkbox
                             className="checker"
@@ -33,27 +33,20 @@ export class TodoItem extends Component {
                             color="primary"
                             onChange={() => this.props.markCompleted(id, !completed, title)} /> 
                     </Grid>
-
                     <Grid item xs={6}>
                         <Typography variant="subtitle1" gutterBottom>
                             <p style={this.getStyle()}>{title}</p>
                         </Typography>
                     </Grid>
-
                     <Grid item xs={1}>
-                        <Button 
-                            
+                        <Button  
                             color="secondary"
                             style={{marginLeft: '10px'}} 
                             fullWidth  
-                            onClick={() => this.props.delTodo(id)}>Delete</Button>  
-                    </Grid>
-                    
+                            onClick={() => this.props.delTodo(id)}><ClearIcon/></Button>  
+                    </Grid>                   
                 </Grid>
-                
-
             </div>
-            
         )
     }
 }

@@ -28,8 +28,7 @@ class AddTodo extends Component {
                 <Grid
                     justify="center"
                     container 
-                    maxWidth="sm" 
-                    spacing={24}
+                    maxwidth="sm" 
                     
                 >
                     <Grid item xs={7}>

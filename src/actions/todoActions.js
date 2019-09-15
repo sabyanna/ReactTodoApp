@@ -4,12 +4,12 @@ import axios from 'axios';
 export const fetchTodos = () => dispatch => {
   axios
     .get('https://jsonplaceholder.typicode.com/todos?_limit=10')
-    .then(res => {console.log(res.data)
+    .then(res => 
       dispatch({
         type: FETCH_TODOS,
         payload: res.data
       })
-    })
+    )
 }
 
 export const addTodo = (title) => dispatch => {
